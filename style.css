@@ -6,29 +6,99 @@
     flex-direction: column;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
+    transition: background-image 1s ease-in-out; /* Transition du fond */
 }
 
 #time-display {
     font-size: 2rem;
+    transition: opacity 1s ease-in-out; /* Transition de l'heure */
 }
 
+/* Styles de base pour les transitions du texte */
+#say-hi {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Transition du texte */
+}
+
+/* Classes pour les différents moments de la journée */
 .aurore {
-background-color: #0017b0;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f8f0f0;
+    text-shadow: 2px 2px 6px rgba(173, 216, 230, 0.8), 0 0 30px rgba(255, 182, 193, 0.5);
+    background-image: url('AURORE.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .matin {
-background-color: lightskyblue;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f0e68c;
+    text-shadow: 2px 2px 4px rgba(255, 223, 0, 0.8), 0 0 20px rgba(255, 223, 0, 0.5);
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('MATIN.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .apres-midi {   
-background-color: lightskyblue;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff7f50;
+    text-shadow: 2px 2px 6px rgba(255, 105, 180, 0.7), 0 0 30px rgba(255, 165, 0, 0.5);
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('APREM.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .soiree {
-background-color: blue;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    text-shadow: 2px 2px 4px rgba(255, 153, 0, 0.916), 0 0 25px rgb(219, 111, 17), 0 0 50px rgb(241, 178, 2);
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background-image: url('SOIR.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .nuit {
-background-color: darkblue;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 139, 0.6);
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    background-image: url('NUIT.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* Lorsque le texte devient visible */
+#say-hi.visible {
+    opacity: 1;
+}
+
+/* Lorsque l'heure devient visible */
+#time-display.visible {
+    opacity: 1;
+}

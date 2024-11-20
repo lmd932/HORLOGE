@@ -8,7 +8,8 @@ function changeStyleBasedOnTime() {
     // Condition pour afficher "Bonjour !" ou "Bonsoir !"
     if (currentHour >= 5 && currentHour < 18) {
         sayHi.textContent = 'Bonjour !';  // Entre 5h et 18h
-    } else {
+    } 
+    else {
         sayHi.textContent = 'Bonsoir !';  // Entre 18h et 5h
     }
 
@@ -21,15 +22,25 @@ function changeStyleBasedOnTime() {
     // Appliquer la classe appropriée en fonction de l'heure
     if (currentHour >= 5 && currentHour < 8) {
         element.classList.add('aurore');  // Aurore : 5h-8h
-    } else if (currentHour >= 8 && currentHour < 12) {
+    } 
+    else if (currentHour >= 8 && currentHour < 12) {
         element.classList.add('matin');   // Matin : 8h-12h
-    } else if (currentHour >= 12 && currentHour < 18) {
+    } 
+    else if (currentHour >= 12 && currentHour < 18) {
         element.classList.add('apres-midi'); // Après-midi : 12h-18h
-    } else if (currentHour >= 18 && currentHour < 22) {
+    } 
+    else if (currentHour >= 18 && currentHour < 22) {
         element.classList.add('soiree'); // Soirée : 18h-22h
-    } else {
+    } 
+    else {
         element.classList.add('nuit');  // Nuit : 22h-5h
     }
+
+    // Appliquer la classe visible après un léger délai pour activer la transition
+    setTimeout(() => {
+        sayHi.classList.add('visible');
+        document.getElementById('time-display').classList.add('visible');
+    }, 100); // délai de 100 ms pour que la transition soit appliquée
 }
 
 // Fonction pour afficher l'heure en direct
