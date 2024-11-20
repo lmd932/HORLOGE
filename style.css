@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #time-display {
@@ -12,17 +13,22 @@
 }
 
 .aurore {
+background-color: #0017b0;
 }
 
 .matin {
+background-color: lightskyblue;
 }
 
 .apres-midi {   
+background-color: lightskyblue;
 }
 
 .soiree {
+background-color: blue;
 }
 
 .nuit {
+background-color: darkblue;
 }
 
